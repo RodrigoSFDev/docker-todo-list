@@ -11,5 +11,3 @@ COPY . .
 ENTRYPOINT [ "npm" ]
 
 CMD [ "start" ]
-
-
