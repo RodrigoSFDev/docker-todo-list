@@ -1,12 +1,14 @@
-version: '3'
+version: "3"
 services:
-  todobackend:
+  todoback:
     image: todobackend
+    restart: on-failure
     ports:
       - 3001:3001
 
-  todofrontend:
+  todofront:
     image: todofrontend
+    restart: on-failure
     ports:
       - 3000:3000
     depends_on:
@@ -16,6 +18,7 @@ services:
 
   todotests:
     image: todotests
+    restart: on-failure
     depends_on:
       - todobackend
       - todofrontend
